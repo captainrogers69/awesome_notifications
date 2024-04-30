@@ -191,7 +191,7 @@ abstract class IAwesomeNotifications {
   /// feature activated, or add a button to your app's settings page that calls
   /// this method when tapped, or include a prompt in your app to encourage users
   /// to visit the notification settings page to enable notifications.
-  Future<void> showNotificationConfigPage({String? channelKey});
+  // Future<void> showNotificationConfigPage({String? channelKey});
 
   /// Opens the system's notifications settings page for the app's alarms.
   ///

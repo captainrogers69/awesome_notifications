@@ -203,9 +203,9 @@ void main() {
       await notifications.showGlobalDndOverridePage();
     });
 
-    test('showNotificationConfigPage method', () async {
-      await notifications.showNotificationConfigPage();
-    });
+    // test('showNotificationConfigPage method', () async {
+    //   await notifications.showNotificationConfigPage();
+    // });
 
     test('getLocalization method', () async {
       String result = await notifications.getLocalization();

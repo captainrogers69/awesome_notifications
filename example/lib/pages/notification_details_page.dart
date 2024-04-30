@@ -1,10 +1,9 @@
 import 'dart:math';
 
-import 'package:flutter/services.dart';
-import 'package:flutter/material.dart';
-
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NotificationDetailsPage extends StatefulWidget {
   String get results => receivedNotification.toString();
@@ -15,7 +14,7 @@ class NotificationDetailsPage extends StatefulWidget {
   const NotificationDetailsPage(this.receivedNotification, {super.key});
 
   @override
-  _NotificationDetailsPageState createState() =>
+  State<NotificationDetailsPage> createState() =>
       _NotificationDetailsPageState();
 }
 
@@ -82,7 +81,7 @@ class _NotificationDetailsPageState extends State<NotificationDetailsPage> {
                                           1.0
                                         ])),
                                   )
-                                : Container(
+                                : SizedBox(
                                     height: maxSize * 0.4 +
                                         mediaQueryData.padding.top,
                                     width: mediaQueryData.size.width,
@@ -220,14 +219,14 @@ class _NotificationDetailsPageState extends State<NotificationDetailsPage> {
                           children: <Widget>[
                             Text(
                               'ReceivedNotification details:',
-                              style: themeData.textTheme.titleMedium
-                                  ?.copyWith(color: themeData.colorScheme.onSurface),
+                              style: themeData.textTheme.titleMedium?.copyWith(
+                                  color: themeData.colorScheme.onSurface),
                             ),
                             const SizedBox(height: 20),
                             Text(
                               widget.results,
-                              style: themeData.textTheme.bodyMedium
-                                  ?.copyWith(color: themeData.colorScheme.onSurface),
+                              style: themeData.textTheme.bodyMedium?.copyWith(
+                                  color: themeData.colorScheme.onSurface),
                             ),
                           ],
                         )),

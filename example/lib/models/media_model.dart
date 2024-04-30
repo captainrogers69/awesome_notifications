@@ -1,5 +1,5 @@
-import 'package:flutter/widgets.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:flutter/widgets.dart';
 
 class CloseCaptionElement {
   Duration start;
@@ -10,7 +10,7 @@ class CloseCaptionElement {
 }
 
 class MediaModel {
-  String _diskImagePath;
+  final String _diskImagePath;
 
   bool isPlaying;
 

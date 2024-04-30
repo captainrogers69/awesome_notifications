@@ -12,7 +12,7 @@ import 'package:mocktail/mocktail.dart';
 import 'src/isolates/isolate_main_test.dart';
 
 class MockMethodChannel extends MethodChannel {
-  MockMethodChannel(String name) : super(name);
+  MockMethodChannel(super.name);
 
   final Map<String, dynamic> _responses = {};
 
@@ -646,17 +646,17 @@ void main() {
       expect(showGlobalDndOverridePageCalled, true);
     });
 
-    test('showNotificationConfigPage', () async {
-      bool showNotificationConfigPageCalled = false;
-      mockMethodChannel.setMockMethodCallHandler(
-          CHANNEL_METHOD_SHOW_NOTIFICATION_PAGE, (dynamic arguments) async {
-        expect(arguments, null);
-        showNotificationConfigPageCalled = true;
-      });
+    // test('showNotificationConfigPage', () async {
+    //   bool showNotificationConfigPageCalled = false;
+    //   mockMethodChannel.setMockMethodCallHandler(
+    //       CHANNEL_METHOD_SHOW_NOTIFICATION_PAGE, (dynamic arguments) async {
+    //     expect(arguments, null);
+    //     showNotificationConfigPageCalled = true;
+    //   });
 
-      await awesomeNotifications.showNotificationConfigPage();
-      expect(showNotificationConfigPageCalled, true);
-    });
+    //   await awesomeNotifications.showNotificationConfigPage();
+    //   expect(showNotificationConfigPageCalled, true);
+    // });
 
     test('getLocalization', () async {
       mockMethodChannel.setMockMethodCallHandler(

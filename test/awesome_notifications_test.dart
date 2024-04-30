@@ -325,12 +325,12 @@ void main() {
       verify(() => mockNotifications.showGlobalDndOverridePage()).called(1);
     });
 
-    test('showNotificationConfigPage method is called once', () async {
-      when(() => mockNotifications.showNotificationConfigPage())
-          .thenAnswer((_) => Future.value());
-      await AwesomeNotifications().showNotificationConfigPage();
-      verify(() => mockNotifications.showNotificationConfigPage()).called(1);
-    });
+    // test('showNotificationConfigPage method is called once', () async {
+    //   when(() => mockNotifications.showNotificationConfigPage())
+    //       .thenAnswer((_) => Future.value());
+    //   await AwesomeNotifications().showNotificationConfigPage();
+    //   verify(() => mockNotifications.showNotificationConfigPage()).called(1);
+    // });
 
     test('getLocalization method is called once', () async {
       when(() => mockNotifications.getLocalization())

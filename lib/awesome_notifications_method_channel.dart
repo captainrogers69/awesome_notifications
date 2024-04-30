@@ -477,11 +477,11 @@ class MethodChannelAwesomeNotifications extends AwesomeNotificationsPlatform {
     await methodChannel.invokeMethod(CHANNEL_METHOD_SHOW_GLOBAL_DND_PAGE);
   }
 
-  @override
-  Future<void> showNotificationConfigPage({String? channelKey}) async {
-    await methodChannel.invokeMethod(
-        CHANNEL_METHOD_SHOW_NOTIFICATION_PAGE, channelKey);
-  }
+  // @override
+  // Future<void> showNotificationConfigPage({String? channelKey}) async {
+  //   await methodChannel.invokeMethod(
+  //       CHANNEL_METHOD_SHOW_NOTIFICATION_PAGE, channelKey);
+  // }
 
   @override
   Future<String> getLocalization() async {
