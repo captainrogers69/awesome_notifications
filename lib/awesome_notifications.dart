@@ -333,11 +333,11 @@ class AwesomeNotifications implements IAwesomeNotifications {
     return AwesomeNotificationsPlatform.instance.showGlobalDndOverridePage();
   }
 
-  // @override
-  // Future<void> showNotificationConfigPage({String? channelKey}) {
-  //   return AwesomeNotificationsPlatform.instance
-  //       .showNotificationConfigPage(channelKey: channelKey);
-  // }
+  @override
+  Future<void> showNotificationConfigPage({String? channelKey}) {
+    return AwesomeNotificationsPlatform.instance
+        .showNotificationConfigPage(channelKey: channelKey);
+  }
 
   @override
   Future<String> getLocalization() async {

@@ -196,8 +196,8 @@ class AwesomeNotificationsEmpty extends AwesomeNotificationsPlatform
   @override
   Future<void> showGlobalDndOverridePage() async {}
 
-  // @override
-  // Future<void> showNotificationConfigPage({String? channelKey}) async {}
+  @override
+  Future<void> showNotificationConfigPage({String? channelKey}) async {}
 
   @override
   Future<String> getLocalization() async {
